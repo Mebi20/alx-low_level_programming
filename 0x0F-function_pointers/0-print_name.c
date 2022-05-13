@@ -1,6 +1,6 @@
 */
-* File: 0-print_name.c
-* Author: Osubor Chukwudumebi
+* File:0-print_name.c
+* Author:Chukwudumebi Osubor
 */
 
 #include "function_pointers.h"
