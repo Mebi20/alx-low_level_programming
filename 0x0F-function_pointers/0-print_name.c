@@ -1,7 +1,7 @@
 */
 * File: 0-print_name.c
-* Author: Osubor Chukwudumebi 
-* */
+* Author: Osubor Chukwudumebi
+*/
 
 #include "function_pointers.h"
 
