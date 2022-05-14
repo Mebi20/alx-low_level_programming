@@ -1,18 +1,15 @@
-*/
-* File:0-print_name.c
-* Author:Chukwudumebi Osubor
-*/
-
 #include "function_pointers.h"
 
 /**
-* print_name - prints a name
-* @name: name to be printed
-* @f: callback function that prints name
+* print_name - this function prints a name
+* @name: pointer string
+* @f: pointer to function
+*
+* Return: void
 */
+
 void print_name(char *name, void (*f)(char *))
 {
-if (!f || !name)
-return;
-(*f)(name);
+if (name != NULL && f != NULL)
+f(name);
 }
