@@ -1,18 +1,35 @@
-#include <stdio.h>
+#include "lists.h"
+#include <stdlib.h>
 
 /**
-* main - prints the alphabet in lowercase, and then in uppercase,
-* followed by a new line
-* Return: Always 0 (Success)
+* add_nodeint_end - adds a new node at the end of a listint_t list.
+* @head: double pointer to the beginning of the list
+* @n: integer to add to the list
+*
+* Return: pointer to the new node
 */
-int main(void)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-int ch;
+listint_t *new;
+listint_t *current;
 
-for (ch = 'a'; ch <= 'z'; ch++)
-putchar(ch);
-for (ch = 'A'; ch <= 'Z'; ch++)
-putchar(ch);
-putchar('\n');
-return (0);
+if (head == NULL)
+return (NULL);
+new = malloc(sizeof(listint_t));
+if (new == NULL)
+return (NULL);
+new->n = n;
+new->next = NULL;
+if (*head == NULL)
+{
+*head = new;
+return (new);
+}
+current = *head;
+while (current->next != NULL)
+{
+current = current->next;
+}
+current->next = new;
+return (new);
 }
