@@ -6,7 +6,7 @@
 * @head: double pointer to the beginning of the list
 *
 * Return: the head node's data (n).
-m*/
+*/
 int pop_listint(listint_t **head)
 {
 listint_t *first;
